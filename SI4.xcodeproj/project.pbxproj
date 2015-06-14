@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8360BC011B2D987200FD10BD /* DistanceHeuristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360BC001B2D987200FD10BD /* DistanceHeuristic.swift */; };
+		8360BC041B2D98B200FD10BD /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360BC031B2D98B200FD10BD /* Selector.swift */; };
+		8360BC061B2D99BA00FD10BD /* RandomSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360BC051B2D99BA00FD10BD /* RandomSelector.swift */; };
+		8360BC081B2DA43300FD10BD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8360BC071B2DA43300FD10BD /* Extensions.swift */; };
 		83B284B41B2C503000B3378B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B284B31B2C503000B3378B /* AppDelegate.swift */; };
 		83B284B61B2C503000B3378B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B284B51B2C503000B3378B /* ViewController.swift */; };
 		83B284B81B2C503000B3378B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B284B71B2C503000B3378B /* Images.xcassets */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8360BC001B2D987200FD10BD /* DistanceHeuristic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceHeuristic.swift; sourceTree = "<group>"; };
+		8360BC031B2D98B200FD10BD /* Selector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
+		8360BC051B2D99BA00FD10BD /* RandomSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomSelector.swift; sourceTree = "<group>"; };
+		8360BC071B2DA43300FD10BD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		83B284AE1B2C503000B3378B /* SI4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SI4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B284B21B2C503000B3378B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B284B31B2C503000B3378B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8360BC021B2D989700FD10BD /* Element Selector */ = {
+			isa = PBXGroup;
+			children = (
+				8360BC001B2D987200FD10BD /* DistanceHeuristic.swift */,
+				8360BC031B2D98B200FD10BD /* Selector.swift */,
+				8360BC051B2D99BA00FD10BD /* RandomSelector.swift */,
+			);
+			name = "Element Selector";
+			sourceTree = "<group>";
+		};
 		83B284A51B2C503000B3378B = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +115,7 @@
 		83B284B01B2C503000B3378B /* SI4 */ = {
 			isa = PBXGroup;
 			children = (
+				8360BC021B2D989700FD10BD /* Element Selector */,
 				83B284B31B2C503000B3378B /* AppDelegate.swift */,
 				83B284B51B2C503000B3378B /* ViewController.swift */,
 				83B284B71B2C503000B3378B /* Images.xcassets */,
@@ -119,6 +138,7 @@
 			children = (
 				83B284E01B2CE30500B3378B /* Matrix.swift */,
 				83B284B21B2C503000B3378B /* Info.plist */,
+				8360BC071B2DA43300FD10BD /* Extensions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -260,6 +280,10 @@
 				83B284D11B2C520B00B3378B /* Image.swift in Sources */,
 				83B284DD1B2C724F00B3378B /* Pair.swift in Sources */,
 				83B284E81B2D8C0700B3378B /* PerspectiveTransform.swift in Sources */,
+				8360BC061B2D99BA00FD10BD /* RandomSelector.swift in Sources */,
+				8360BC081B2DA43300FD10BD /* Extensions.swift in Sources */,
+				8360BC011B2D987200FD10BD /* DistanceHeuristic.swift in Sources */,
+				8360BC041B2D98B200FD10BD /* Selector.swift in Sources */,
 				83B284DF1B2CE0E900B3378B /* Transform.swift in Sources */,
 				83B284B41B2C503000B3378B /* AppDelegate.swift in Sources */,
 			);
@@ -452,6 +476,7 @@
 				83B284CC1B2C503000B3378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		83B284CD1B2C503000B3378B /* Build configuration list for PBXNativeTarget "SI4Tests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +485,7 @@
 				83B284CF1B2C503000B3378B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

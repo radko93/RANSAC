@@ -12,15 +12,20 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var image=Image(name: "1a.png")
-        print("\(image.ValuablePoints.last?.properties[0])")
-        // Do any additional setup after loading the view.
+      
+        
+        
     }
 
     override var representedObject: AnyObject? {
         didSet {
-        // Update the view, if already loaded.
+       
         }
+    }
+    
+    func calculate(fun:Transform)
+    {
+        println()
     }
 
 

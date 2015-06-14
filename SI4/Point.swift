@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Point
+class Point : Equatable
 {
     var x:Double
     var y:Double
@@ -18,6 +18,8 @@ class Point
         self.y=y
     }
     
-   
     
+}
+func ==(lhs: Point, rhs: Point) -> Bool {
+    return lhs.x==rhs.x && lhs.y==rhs.y 
 }

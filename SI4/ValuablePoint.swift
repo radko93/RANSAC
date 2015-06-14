@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ValuablePoint : Point
+class ValuablePoint : Point, Equatable
 {
     let properties:[Int]
     var closestNeighbour:ValuablePoint?
@@ -16,11 +16,16 @@ class ValuablePoint : Point
     {
         self.properties=properties
         super.init(x: x, y: y)
-      
     }
     
-    func toString()-> String
+    func DistanceByLocation(other:Point) -> Double
     {
-        return " "
+        let xs:Double = x - other.x;
+        let ys:Double = y - other.y;
+        return xs*xs + ys*ys
     }
+}
+
+func ==(lhs: ValuablePoint, rhs: ValuablePoint) -> Bool {
+    return lhs.x==rhs.x && lhs.y==rhs.y
 }

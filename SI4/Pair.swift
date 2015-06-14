@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Pair
+struct Pair : Equatable
 {
     let First:ValuablePoint
     let Second:ValuablePoint
@@ -17,4 +17,10 @@ struct Pair
         self.First=first
         self.Second=second
     }
+    
+    
+}
+func ==(lhs: Pair, rhs: Pair) -> Bool
+{
+    return lhs.First == rhs.First && lhs.Second==rhs.Second 
 }
