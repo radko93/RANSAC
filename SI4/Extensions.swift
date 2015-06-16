@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+extension Double {
+    var f: CGFloat { return CGFloat(self) }
+}
 extension Int {
     func random() -> Int {
         return Int(arc4random_uniform(UInt32(abs(self))))

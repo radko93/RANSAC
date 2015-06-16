@@ -77,7 +77,7 @@ class NeighboursAnalysis
                 
                 if distances[index][p3] == minDistance
                 {
-                    println("true  \(distances[index][p3]) \(minDistance) \(index) \(p3)")
+                    //println("true  \(distances[index][p3]) \(minDistance) \(index) \(p3)")
                     var closest=true
                     for var p=0; closest && p<points1.count; p++
                     {

@@ -52,4 +52,6 @@ class Ransac {
     {
         return pair.First.Transform(matrix).DistanceByLocation(pair.Second)
     }
+    
+    
 }

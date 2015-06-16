@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io
 *.haraff.sift
+*.png
 ### Swift ###
 # Xcode
 #
