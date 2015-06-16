@@ -17,12 +17,12 @@ class AffineTransform: Transform
     }
     func Transform(pairs:[Pair]) -> Matrix<Double>
     {
-        var x=[Double]()
-        var y=[Double]()
-        var u=[Double]()
-        var v=[Double]()
+        var x=[Double](count: ElementsCount, repeatedValue: 0)
+        var y=[Double](count: ElementsCount, repeatedValue: 0)
+        var u=[Double](count: ElementsCount, repeatedValue: 0)
+        var v=[Double](count: ElementsCount, repeatedValue: 0)
         
-        for index in 0...ElementsCount
+        for index in 0...ElementsCount-1
         {
             x[index]=pairs[index].First.x
             y[index]=pairs[index].First.y
@@ -38,8 +38,8 @@ class AffineTransform: Transform
             [0, 0, 0, x[0], y[0], 1],
             [0, 0, 0, x[1], y[1], 1],
             [0, 0, 0, x[2], y[2], 1]
-        ])
-       
+            ])
+        
         let resultVector=mul(inv(matrix),vector)
         return Matrix([[resultVector[0, 0], resultVector[1, 0], resultVector[2, 0]],[resultVector[3, 0], resultVector[4, 0], resultVector[5, 0]],[0, 0, 1]])
     }

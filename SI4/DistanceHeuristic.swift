@@ -36,11 +36,11 @@ class DistanceHeuristic : Selector
             
             do
             {
-            do {
-                random=pairs.chooseOne()
-            } while contains(pairs, random)
-            distanceFirst=result[indexCalc(index)].First.DistanceByLocation(random.First)
-            distanceSecond=result[indexCalc(index)].Second.DistanceByLocation(random.Second)
+                do {
+                    random=pairs.chooseOne()
+                } while contains(pairs, random)
+                distanceFirst=result[indexCalc(index)].First.DistanceByLocation(random.First)
+                distanceSecond=result[indexCalc(index)].Second.DistanceByLocation(random.Second)
             } while distanceFirst > R || distanceSecond > R || distanceFirst < r || distanceSecond < r
             result[index] = random;
             

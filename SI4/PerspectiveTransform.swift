@@ -17,12 +17,12 @@ class PerspectiveTransform: Transform
     }
     func Transform(pairs:[Pair]) -> Matrix<Double>
     {
-        var x=[Double]()
-        var y=[Double]()
-        var u=[Double]()
-        var v=[Double]()
+        var x=[Double](count: ElementsCount, repeatedValue: 0)
+        var y=[Double](count: ElementsCount, repeatedValue: 0)
+        var u=[Double](count: ElementsCount, repeatedValue: 0)
+        var v=[Double](count: ElementsCount, repeatedValue: 0)
         
-        for index in 0...ElementsCount
+        for index in 0...ElementsCount-1
         {
             x[index]=pairs[index].First.x
             y[index]=pairs[index].First.y
@@ -40,7 +40,7 @@ class PerspectiveTransform: Transform
             [0, 0, 0, x[1], y[1], 1, -v[1]*x[1], -v[1]*y[1]],
             [0, 0, 0, x[2], y[2], 1, -v[2]*x[2], -v[2]*y[2]],
             [0, 0, 0, x[3], y[3], 1, -v[3]*x[3], -v[3]*y[3]]
-            ]
+        ]
         let matrix=Matrix(matrixArray)
         
         let resultVector=mul(inv(matrix),vector)

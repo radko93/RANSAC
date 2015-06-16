@@ -17,9 +17,11 @@ class Point : Equatable
         self.x=x
         self.y=y
     }
-    
-    
+  
 }
 func ==(lhs: Point, rhs: Point) -> Bool {
-    return lhs.x==rhs.x && lhs.y==rhs.y 
+    return lhs.x==rhs.x && lhs.y==rhs.y
+}
+func /=(lhs: Point, rhs: Point) -> Bool {
+    return (lhs.x) != (rhs.x) || (lhs.y) != (rhs.x)
 }

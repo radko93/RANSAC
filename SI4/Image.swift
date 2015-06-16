@@ -23,43 +23,43 @@ class Image  {
     }
     
     
-func parseFile()
-{
-    
-    let path = NSBundle.mainBundle().pathForResource(name, ofType: ".haraff.sift")
-    var err: NSError? = NSError()
-    var counter=0
-    
-    if let aStreamReader = StreamReader(path: path!) {
-        while let line = aStreamReader.nextLine() {
-            if counter==0
-            {
-                numberOfParameters=parseStringtoInt(line)
-                counter++
-            }
-            else if counter == 1
-            {
-                numberOfPairs=parseStringtoInt(line)
-                counter++
-            }
-            else
-            {
-                let paramsarray = split(line) {$0 == " "}
-                var params:[Int]=[]
-
-                 for index in 5...paramsarray.count-1
+    func parseFile()
+    {
+        
+        let path = NSBundle.mainBundle().pathForResource(name, ofType: ".haraff.sift")
+        var err: NSError? = NSError()
+        var counter=0
+        
+        if let aStreamReader = StreamReader(path: path!) {
+            while let line = aStreamReader.nextLine() {
+                if counter==0
                 {
-                    params.append(parseStringtoInt(paramsarray[index]))
+                    numberOfParameters=parseStringtoInt(line)
+                    counter++
                 }
-                ValuablePoints.append(ValuablePoint(x: parseStringtoDouble(paramsarray[0]),y: parseStringtoDouble(paramsarray[1]),properties: params))
+                else if counter == 1
+                {
+                    numberOfPairs=parseStringtoInt(line)
+                    counter++
+                }
+                else
+                {
+                    let paramsarray = split(line) {$0 == " "}
+                    var params:[Int]=[]
+                    
+                    for index in 5...paramsarray.count-1
+                    {
+                        params.append(parseStringtoInt(paramsarray[index]))
+                    }
+                    ValuablePoints.append(ValuablePoint(x: parseStringtoDouble(paramsarray[0]),y: parseStringtoDouble(paramsarray[1]),properties: params))
+                }
+                
             }
             
+            
+            aStreamReader.close()
         }
-        
-        
-        aStreamReader.close()
     }
-}
     func parseStringtoInt(name:String) -> Int
     {
         return (name as NSString).integerValue as Int
